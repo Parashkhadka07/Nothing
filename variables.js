@@ -12,7 +12,7 @@ cons g = "e";
 cons g = "f";
 console.log(g);
 
-//let c = "sita"; // let us update the old variables
+//let c = "sita"; // let update the old variables of data
 //console.log(a, b, c);
 
 // always start variables key word with cons keyword
