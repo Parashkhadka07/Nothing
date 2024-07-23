@@ -73,10 +73,26 @@
 // const x = Number(prompt("enter the number you want to count down of"));
 // console.log(`${sum(x)}`);
 
-
 // inline function
 //
 
+//implicit and callback function use
 
-
-implicit and callback function use
+const temptoCelsuis = (tempinF) => ((tempinF - 32) / 9) * 5;
+const temptoFahrenheit = (tempinC) => (tempinC / 5) * 9 + 32;
+const newfunction = (temp, call) => call(temp);
+const unit = prompt(
+  "enter 'c' to convert fahrenheit to celsius and 'f' for reverse"
+);
+switch (unit) {
+  case "c":
+    const tempinF = Number(prompt("enter the temperature in fahrenheit"));
+    alert(`is ${newfunction(tempinF, temptoCelsuis)} degree celsius`);
+    break;
+  case "f":
+    const tempinC = Number(prompt("enter the temperature in celsius"));
+    alert(`is ${newfunction(tempinC, temptoFahrenheit)} degree fahrenheit`);
+    break;
+  default:
+    alert("enter the valid data");
+}
